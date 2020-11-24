@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/magestore/getById/:id" method="GET">
+        <service class="Learning\Magestore\Api\CustomerRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/magestore/add" method="POST">
+        <service class="Learning\Magestore\Api\CustomerRepositoryInterface" method="addCustomer"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/magestore/isIdExist/:id" method="GET">
+        <service class="Learning\Magestore\Model\CustomerRepository" method="isIdExist"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/magestore/delete/:id" method="DELETE">
+        <service class="Learning\Magestore\Api\CustomerRepositoryInterface" method="deleteCustomer"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/magestore/edit" method="POST">
+        <service class="Learning\Magestore\Api\CustomerRepositoryInterface" method="editCustomer"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/magestore/addMany" method="POST">
+        <service class="Learning\Magestore\Api\CustomerRepositoryInterface" method="addManyCustomer"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/magestore/getAll" method="GET">
+        <service class="Learning\Magestore\Api\CustomerRepositoryInterface" method="getAll"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/magestore/product/getList20Pro" method="GET">
+        <service class="Learning\Magestore\Api\ProductRepositoryInterface" method="getList20stProduct"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

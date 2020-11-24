@@ -1,0 +1,35 @@
+<?php
+/**
+ * @var \Learning\Magestore\Block\Display $block
+ */
+$listProduct = $block->getListProduct();
+echo '<table>
+        <tr>
+            <th>storeId</th>
+            <th>categoryId</th>
+            <th>sku</th>
+            <th>name</th>
+            <th>category</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>isVisibility</th>
+            <th></th>
+</tr>';
+foreach ($listProduct as $item){
+    echo '<tr>'.
+            '<td>'.$item->getStoreId().'</td>
+            <td>'.$item->getCategoryId().'</td>
+            <td>'.$item->getSku().'</td>
+            <td>'.$item->getName().'</td>
+            <td>'.$item->getCategory().'</td>
+            <td>'.$item->getPrice().'</td>
+            <td>'.$item->getQty().'</td>
+            <td>'.$item->getVisibility().'</td>
+</tr>';
+}
+echo '</table>';
+?>
+
+
+
+

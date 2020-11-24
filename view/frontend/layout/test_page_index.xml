@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+
+    </head>
+    <body>
+        <container>
+<!--            <referenceBlock name="content">-->
+<!--                <block class="Learning\Magestore\Block\Display" name="giftvoucher.product.condition" before="-" template="Learning_Magestore::sayhello.phtml"/>-->
+<!--            </referenceBlock>-->
+            <referenceContainer name="page.wrapper">
+                <block class="Learning\Magestore\Block\Display" name="giftvoucher.product.condition" after="-" template="Learning_Magestore::sayhello.phtml"/>
+            </referenceContainer>
+        </container>
+    </body>
+</page>
